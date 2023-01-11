@@ -41,7 +41,7 @@ console.log(frase.replace(/r/g,'#'));
 
 console.log(frase.length);//tamanho da frase
 console.log(frase.slice(2,6));//mostra as strings no intervalo de 2 a 6
-console.log(frase.slice(-4));//começa a contar do fina frase 
+console.log(frase.slice(-4));//começa a contar do final da frase 
 console.log(frase.split('r'));//a frase é divida nas posiçoes que tiver a letra 'r'.
 console.log(frase.split(' ',3));//A frase será dividida nos intervalos vasios ' ' e reperita 3 vezes
 console.log(frase.toUpperCase());//Transforma as letras da frase em maiusculas
