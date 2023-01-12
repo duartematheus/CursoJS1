@@ -26,4 +26,23 @@ console.log(num3.toFixed(2));
 
 num3 = parseFloat(num3.toFixed(2));
 console.log(num3);
-console.log(Number.isInteger(num3));
+console.log(Number.isInteger(num3));// verifica se um numero é inteiro
+
+//Exemplo Math
+let num5 = 1.54578;
+let num6 = Math.floor(num5); //Arredonda o numero para baixo.
+let num7 = Math.ceil(num5); //Arredonda para cima.
+let num8 = Math.round(num5); //Arredonda para o numero mais proximo
+const aleatorio = Math.random() * (10 - 5) +5;//Gera numero aleatorio entre 10 e 5; 
+
+console.log(num6);
+console.log(num7);
+console.log(num8);
+console.log(Math.max(2,3,4,8,9,10,22,356,6,75,32));
+console.log(Math.min(2,3,4,8,9,10,22,356,6,75,32));
+console.log(Math.round(aleatorio));
+console.log(Math.PI);//Numero Pi
+console.log(Math.pow(2, 10));//dois elevado a potencia de 10
+console.log(2 ** 10);//dois elevado a potencia de 10
+console.log(9 ** (1/2));//raiz quadrada de 9
+
