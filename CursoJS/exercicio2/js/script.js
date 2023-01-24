@@ -1,5 +1,6 @@
 function meuEscopo () {
-    const form = document.querySelector('.form'); //seleciona a classe form do formulario
+
+    const form = document.querySelector ('.form');
     
     function recebeEventoForm (evento) {
         evento.preventDefaut();
@@ -9,9 +10,9 @@ function meuEscopo () {
         const altura = form.querySelector('.altura');
 
         console.log(nome, sobrenome, peso, altura);
-    }
+    };
 
     form.addEventListener('submit', recebeEventoForm);
 
 }
-meuEscopo();
+meuEscopo ();
