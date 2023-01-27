@@ -64,3 +64,12 @@ form button:hover {
 form button:active { 
     background: var(--primary-color-active);
 }
+
+.paragrafo-resultado {
+    background: rgb(89, 213, 55);
+    padding: 10px 20px;
+}
+.bad {
+    background: rgb(219, 54, 25);
+    padding: 10px 20px;
+}
