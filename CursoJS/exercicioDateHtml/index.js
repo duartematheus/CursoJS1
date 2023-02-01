@@ -1,38 +1,87 @@
 function dataSite(valor){
-    const diaSemana='';
-    const dia = valor.getDay();
-    //const data = valor.getDate();
-    //const hora = valor.getHours(); 
-    if ( dia == 0){
+    
+    if ( valor.getDay() == 0){
         diaSemana = 'Domingo';
+       
     }
-    else if ( dia == 1){
+    else if ( valor.getDay() == 1){
         diaSemana == 'Segunda';
+        
     }
-    else if ( dia == 2){
+    else if ( valor.getDay() == 2){
         diaSemana = 'Terça-Feira';
+       
     }
-    else if ( dia == 3){
+    else if ( valor.getDay() == 3){
         diaSemana = 'Quarta-Feira';
+      
     }
-    else if ( dia == 5){
+    else if ( valor.getDay() == 5){
         diaSemana = 'Quinta-Feira';
+       
     }
-    else if ( dia == 6){
+    else if ( valor.getDay() == 6){
         diaSemana = 'Sexta-Feira';
+    
     }
-    else if (dia == 7){
+    else if (valor.getDay()== 7){
         diaSemana ='Sábado';
+        
     }
     else{
-        diaSemana = '';
+        diaSemana = '';       
+    } 
+   
+    switch (valor.getMonth()){
+        case 0:
+            mesDoAno = 'Janeiro';
+            break;
+        case 1:
+            mesDoAno = 'Fevereiro';
+            break;
+        case 2:
+            mesDoAno = 'Março';
+            break;
+        case 3:
+            mesDoAno = 'Abril';
+            break;
+        case 4:
+            mesDoAno = 'Maio';
+            break;
+        case 5:
+            mesDoAno = 'Junho';
+            break;
+        case 6:
+            mesDoAno = 'Julho';
+            break;
+        case 7:
+            mesDoAno = 'Agosto';
+            break;
+        case 8:
+            mesDoAno = 'Setembro';
+            break;
+        case 9:
+            mesDoAno = 'Outubro';
+            break;
+        case 10:
+            mesDoAno = 'Novembro';
+            break;
+        case 11:
+            mesDoAno = 'Dezembro';
+            break;
+         
+    }
+    function zero(numero){
+        return numero <= 9 ? `0${numero}`:numero;
     }
    
-    return diaSemana;
+    
+    return `${diaSemana} , ${valor.getDate()} de ${mesDoAno} de ${valor.getFullYear()}    ${zero(valor.getHours())}:${zero(valor.getMinutes())}:${zero(valor.getSeconds())}`;  
+    
+
 }
 
-const hoje = new Date();
-dataSite(hoje);
-//const mostrarData = document.querySelector('#data');
-//const diaLiteral = dataSite(hoje);
-//mostrarData.innerHTML = diaLiteral;
+let hoje = new Date();
+const mostrarData = document.querySelector('#data');
+
+mostrarData.innerHTML = dataSite(hoje);
