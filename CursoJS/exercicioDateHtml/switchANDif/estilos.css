@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{
+    background-color: rgb(62, 118, 222);
+}
+
+h1 {
+    background-color: white;
+    padding: 20px;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    margin-left: 320px;
+    margin-top: 150px;
+    border-radius: 10px;
+}
