@@ -14,8 +14,8 @@ for( let i=0; i< elementos.length; i++){
     let { tag, texto } = elementos[i];
     let criandoTag = document.createElement(tag);
     let criandoTexto = document.createTextNode(texto);
-    
-    criandoTag.appendChild(criandoTexto);    
+    criandoTag.appendChild(criandoTexto);  
+    //criandoTag.innerText = texto; --> è mais uma opção para escrever na pag HTML  
     criandoHTML.appendChild(criandoTag);
 
 }
