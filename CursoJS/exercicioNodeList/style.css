@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgba(92, 198, 248, 0.869);
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: 400px;
+    width: 400px;
+}
