@@ -2,31 +2,30 @@ let hora = 0;
 let min = 0;
 let seg = 0;
 
-while( hora <= 23){
+while( hora < 24){
+       
+    if (min <= 59){
         
-    if (min <=58){
-        
-        if(seg <=58){
-            seg +=1;
-                          
+        if(seg < 59){
+           
+            console.log( `${zero(hora)}:${zero(min)}:${zero(seg)}`);
+            seg +=1;             
+            
         }else {
-            seg = 0;
             min += 1;
+                
+            seg = 0;   
             
         }
        
     }else {
         min = 0;
-        seg = 0;
         hora +=1;
-        
+               
     }
-    if (hora ===24 && min ===0 && seg ===0){
-        hora = 0;
-
-    }
+    
           
-    console.log( `${zero(hora)}:${zero(min)}:${zero(seg)}`);
+    
 }
 
 
