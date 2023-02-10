@@ -1,20 +1,39 @@
-function relogio(){
-    let hora = 0;
-    let min = 0;
-    let seg = 0;
-    while( seg <= 59){
-        seg +=1;
-        if (min <=59 && seg === 60){
-            min +=1;
-            if(hora <= 23 && min ===59){
-                hora +=1;
-                               
-            }
-           
+let hora = 0;
+let min = 0;
+let seg = 0;
+
+while( hora <= 23){
+        
+    if (min <=58){
+        
+        if(seg <=58){
+            seg +=1;
+                          
+        }else {
+            seg = 0;
+            min += 1;
+            
         }
        
-        return (`${hora}:${min}:${seg}`);
+    }else {
+        min = 0;
+        seg = 0;
+        hora +=1;
+        
     }
+    if (hora ===24 && min ===0 && seg ===0){
+        hora = 0;
 
+    }
+          
+    console.log( `${zero(hora)}:${zero(min)}:${zero(seg)}`);
 }
-console.log(relogio());
+
+
+function zero(num){
+    if (num < 10){
+        return '0'+ num;
+    }else{
+        return num;
+    }
+}
