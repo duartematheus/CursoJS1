@@ -15,3 +15,12 @@ section {
 p {
     font-size: 2em;
 }
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.cronometroAtivo{
+    color:white;
+    background-color: black;
+}
