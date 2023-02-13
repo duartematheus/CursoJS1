@@ -12,14 +12,17 @@ let timer;
 cronometro.addEventListener('click', function(){
     if(milSeg === 100){
         cronometro.classList.remove('cronometroAtivo')
+        tempo.classList.remove('cronometroAtivoNumeros')
         milSeg = 1000;
     }else{
         cronometro.classList.add('cronometroAtivo')
+        tempo.classList.add('cronometroAtivoNumeros')
         milSeg = 100;
     }
 });
 
 iniciar.addEventListener('click',function(event){   
+    tempo.classList.remove('parado')
     clearInterval(timer);
     timer = setInterval(function(){    
         if( hora <= 23){
@@ -43,10 +46,12 @@ iniciar.addEventListener('click',function(event){
 }); 
 
 parar.addEventListener('click',function(event){
+    tempo.classList.add('parado')
     clearInterval(timer);        
 }); 
 
 zerar.addEventListener('click',function(){   
+    timer.classList.remove('parado')
     clearInterval(timer);
     hora = 0;
     min = 0;
