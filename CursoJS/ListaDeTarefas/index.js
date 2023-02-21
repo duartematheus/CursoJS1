@@ -28,6 +28,7 @@ function criaTarefa(texto){
     tarefas.appendChild(li);
     limpaInput();
     criaBotaoApagar(li);
+    salvarTarefa();
 }
 //Aqui abaixo verifica se a tecla pressionada é 13 que indica o Enter do teclado
 inputTarefa.addEventListener('keypress',function(e){
@@ -42,6 +43,35 @@ btnTarefa.addEventListener('click',function(){
     criaTarefa(inputTarefa.value);
 })
 
-botaoApagar.addEventListener('click',function(){
+document.addEventListener('click',function(e){
+    const el = e.target; //qual quer lugar da tela que for clicado fica resgistrado 
+    //console.log(el);
+    if( el.classList.contains('apagar')){
+        el.parentElement.remove(); // vai remover o pai da li criada
+        salvarTarefa();
+    }
 
-})
+});
+
+function salvarTarefa(){
+    const liTarefas = tarefas.querySelectorAll('li');
+    const listaDeTarefas = [];
+
+    for (let tarefa of liTarefas) {
+        let tarefaTexto = tarefa.innerText;
+        tarefaTexto = tarefaTexto.replace('Apagar','').trim();
+        listaDeTarefas.push(tarefaTexto); // a tarefa foi salva em um array
+    }
+
+    const tarefasJSON = JSON.stringify(listaDeTarefas);// converte um elemento para string no formato JSON
+    localStorage.setItem('tarefas', tarefasJSON);
+}
+
+function adicionaTarefasSalvas(){
+    const tarefas = localStorage.getItem('tarefas'); //pega cada item salvo 
+    const listaDeTarefas = JSON.parse(tarefas);// converte para o formato anterior ao JSON
+    for(let tarefa of listaDeTarefas){
+        criaTarefa(tarefa);
+    }
+}
+adicionaTarefasSalvas();
