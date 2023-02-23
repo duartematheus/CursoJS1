@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    color: azure;
+}
+section{
+    margin-top: 200px;
+    margin-left: 350px;
+    color: gray;
+}
+p{
+    color: gray;
+}
