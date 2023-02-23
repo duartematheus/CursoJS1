@@ -26,8 +26,8 @@ function includeBtnApagar(Li){
     Li.innerText += '   ';
     const btnApagar = document.createElement('button');
     btnApagar.innerText = 'Apagar';
-    btnApagar.setAttribute = ('class','apagar');
-    btnApagar.setAttribute = ('title','Apagar texto');
+    btnApagar.setAttribute('class','apagar');
+    btnApagar.setAttribute('title','Apagar texto');
     Li.appendChild(btnApagar);
 }
 
@@ -36,5 +36,13 @@ document.addEventListener('click', function(e) {
     //console.log(click);
     if(click.classList.contains('apagar')){
         click.parentElement.remove();
+    }
+})
+
+inputTarefas.addEventListener('keypress', function(e){
+    //console.log(e);
+    if(e.keyCode === 13){
+        if(!inputTarefas.value) return;
+        criaTarefa(inputTarefas.value);
     }
 })
