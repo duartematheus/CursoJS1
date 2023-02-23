@@ -12,7 +12,7 @@ function criaTarefa(texto){
     const lista = criaLista();
     lista.innerText = texto;    
     tarefas.appendChild(lista);
-    btnApagar(lista);
+    includeBtnApagar(lista);
     inputTarefas.value = '';
     
 }
@@ -22,11 +22,19 @@ btnAdicionar.addEventListener('click',function(){
     criaTarefa(inputTarefas.value);
 })
 
-function btnApagar(Li){
-    Li.innerText += '  ';
+function includeBtnApagar(Li){
+    Li.innerText += '   ';
     const btnApagar = document.createElement('button');
     btnApagar.innerText = 'Apagar';
     btnApagar.setAttribute = ('class','apagar');
     btnApagar.setAttribute = ('title','Apagar texto');
     Li.appendChild(btnApagar);
 }
+
+document.addEventListener('click', function(e) {
+    const click = e.target;
+    //console.log(click);
+    if(click.classList.contains('apagar')){
+        click.parentElement.remove();
+    }
+})
