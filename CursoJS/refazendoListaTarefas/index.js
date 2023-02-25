@@ -13,10 +13,9 @@ function criaTarefa(texto){
     lista.innerText = texto;    
     tarefas.appendChild(lista);
     includeBtnApagar(lista);
-    inputTarefas.value = '';
-    salvarTarefa();
-    
-    
+     salvarTarefa(); 
+     inputTarefas.value = '';
+     
     
 }
 
@@ -55,7 +54,7 @@ inputTarefas.addEventListener('keypress', function(e){
 function salvarTarefa(){
     const listTarefas = tarefas.querySelectorAll('li');
     const listDeTarefas = [];
-    for( let tarefa in listTarefas){
+    for( let tarefa of listTarefas){
         let textoTarefa = tarefa.innerText;
         textoTarefa = textoTarefa.replace('Apagar','').trim();
         listDeTarefas.push(textoTarefa);
@@ -67,7 +66,7 @@ function salvarTarefa(){
 function adicionaTarefaSalvas(){
     const tarefas = localStorage.getItem('tarefas');
     const listDeTarefas = JSON.parse(tarefas);
-    for(let tarefa in listDeTarefas){
+    for(let tarefa of listDeTarefas){
         criaTarefa(tarefa);
     }
 }
