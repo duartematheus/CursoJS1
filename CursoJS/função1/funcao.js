@@ -68,3 +68,21 @@ function potenciaNumero(numeroPotencia){
 const valorPotencia = potenciaNumero(10);
 console.log(valorPotencia(2));
 
+//Exemplo de função callback
+function f1(callback){
+
+}
+
+//Exemplo de função Imediata (IIFE) immeadiatly Invoked functio expression
+(function(idade, peso, altura) {
+    const sobrenome = 'Rocha';
+    function criaNome(nome){
+        return nome + ' ' + sobrenome;
+    }
+
+    function falaNome(){
+        console.log(criaNome('Matheus'));
+    }
+    falaNome();
+    console.log(idade,peso,altura);
+})(33, 85, 1.80);
