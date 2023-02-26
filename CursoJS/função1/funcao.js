@@ -38,3 +38,33 @@ console.log(raiz2(25));
 //Forma simplificada de uma função quando o parametro é unico
 const raiz3 = n => n **0.5;
 console.log(raiz3(36));
+
+//Exemplo de função usando arguments 
+function nova(letra1,letra2){
+    console.log(letra1,letra2);
+    //para mostrar as outras letras utiliza o arguments
+    console.log(letra1,arguments);
+}
+nova('a','b','c','d','e');
+
+//Exemplo utilizando rest operator ( ... )
+function conta(operador,acumulador,...numero){
+    for(let num of numero){
+        if( operador === '+'){
+            acumulador += num;
+        }
+    }
+    console.log(acumulador);
+}
+conta('+',0,10,20,30,40,50);
+
+//Exemplo de função que retorna outra função
+function potenciaNumero(numeroPotencia){
+    return function(numero){
+        return numero ** numeroPotencia; //faz o numero elevado a potencia
+    }
+}
+
+const valorPotencia = potenciaNumero(10);
+console.log(valorPotencia(2));
+
