@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.telaCalculadora{
+   text-align: center;
+   margin-top: 150px;
+   margin-left: 450px;
+   background-color: azure;
+   padding: 15px;
+   width:200px;
+   border-radius: 15px;
+
+}
+input{
+    align-items: center;
+    text-align: right;
+}
+
+button{
+    width: 100%;
+    border: 0cm;
+    background-color: rgb(66, 66, 179);
+    color: white;
+}
+body{
+    background-color: rgb(79, 79, 79);
+}
