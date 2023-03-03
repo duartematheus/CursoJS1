@@ -1,3 +1,4 @@
+//calculadora com Factory Functions 
 function criaCalculadora() {
     return{
         //atributos
@@ -14,6 +15,7 @@ function criaCalculadora() {
             this.display.addEventListener('keyup' , e => {
                 if (e.keyCode === 13){
                     this.realizaConta();// 13 igual tecla enter
+                }
             });
         },
 
