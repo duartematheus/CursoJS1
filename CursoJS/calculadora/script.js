@@ -7,28 +7,38 @@ function criaCalculadora() {
         //metodos
         inicia() {
             this.clickBotoes();
+            this.precionaEnter();
+        },
+
+        pressionaEnter(){
+            this.display.addEventListener('keyup' , e => {
+                if (e.keyCode === 13){
+                    this.realizaConta();// 13 igual tecla enter
+            });
+        },
+
+        realizaConta() {
+            let conta = this.display.value;
+
+            try {
+                conta = eval(conta);
+
+                if(!conta){
+                    alert('valores invalidos');
+                    return;
+                }
+
+                this.display.value = conta;
+
+            }catch(e){
+                alert('valores invalidos');
+                return;
+            }
         },
 
         btnEnviaDisplay(valor) {
             
-            valor1= parseInt(valor);
-            valor2= 
-            if(valor1 === NaN){
-                if(valor === '+'){
-                    valor1 += 
-                }
-                if(valor === '-'){
-                    
-                }
-                if(valor === '/'){
-                    
-                }
-                if(valor === '*'){
-                    
-                }
-            }
-            this.display.value += valor1;   
-                            
+            this.display.value += valor;                               
             
         },
 
@@ -59,8 +69,7 @@ function criaCalculadora() {
                 }
 
                 if(el.classList.contains('btn-igual')){
-                    const resultado = this.display.value;
-                    console.log(resultado);
+                    this.realizaConta();
                 }
             }.bind(this));
         },
