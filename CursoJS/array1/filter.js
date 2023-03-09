@@ -13,6 +13,30 @@ function callbackFilter(valor,indice,array) {
 }
 
 
-
 const numerosFiltrados = numeros.filter(callbackFilter);
-console.log(numerosFiltrados);
+//outra forma
+const numerosFiltrados2 = numeros.filter(valor => { return valor >10;});
+//outra forma
+const numerosFiltrados3 = numeros.filter(valor => valor >10);
+
+console.log(numerosFiltrados, numerosFiltrados2, numerosFiltrados3);
+
+
+//Outro exemplo
+//Retorne os nomes com 5 letras ou mais.
+//Retorne as pessoas cujo nome termina com 'a'.
+
+const pessoas = [
+    {nome: 'Matheus' , idade: 33},
+    {nome: 'Antõnio' , idade: 65},
+    {nome: 'José' , idade: 45},
+    {nome: 'Fernando' , idade: 50},
+
+];
+
+const tamanhoDeNome = pessoas.filter(function(valor){
+    if ( valor.nome.length >= 5){
+        return valor.nome;
+    }
+    console.log(valor.nome);
+});
