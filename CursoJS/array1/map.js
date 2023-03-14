@@ -20,4 +20,19 @@ const pessoas = [
 const retorneNome = pessoas.map(function(valor){
     return valor.nome;
 });
+const retorneNome2 = pessoas.map(valor => valor.nome);
+const retorneIdade2 = pessoas.map(obj => obj.idade);
+const retorneIdade = pessoas.map(function(valor){
+    return valor.idade;
+});
+
+const criaId = pessoas.map(function(objeto,indice){
+    const newObject = { ...objeto} //essa copia foi feita para evitar de modificar o Array original
+    newObject.Id = indice + 1;
+    return newObject;
+})
 console.log(retorneNome);
+console.log(retorneNome2);
+console.log(retorneIdade);
+console.log(retorneIdade2);
+console.log(criaId);
