@@ -37,3 +37,16 @@ console.log(pessoa3.nome);
 console.log(pessoa3.sobrenome);
 console.log(pessoa3);
 
+//Exemplo de factory 
+function criaPessoa(nome, sobrenome){
+    return {
+        nome,
+        sobrenome,
+        get nomeCompleto(){
+            return `${this.nome} ${this.sobrenome}`;
+        }
+    };
+}
+
+const p1 = criaPessoa('Matheus', 'Rocha Duarte');
+console.log(p1.nomeCompleto);
