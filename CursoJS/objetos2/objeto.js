@@ -20,17 +20,20 @@ console.log(pessoa2);
 const pessoa3 = new Object();
 pessoa3.nome = 'Matheus';
 pessoa3.sobrenome = 'Rocha';
-pessoa1.idade = '33';
+pessoa3.idade = '33';
 pessoa3.falarNome = function() {
     return (`${this.nome} este é seu nome ?`);
-}
+};
 pessoa3.getDataNascimento = function() {
     const dataAtual = new Date();
     return dataAtual.getFullYear() - this.idade;
-}
+};
 
+for (let valor in pessoa3){
+    console.log(pessoa3[valor]);
+}
 
 console.log(pessoa3.nome);
 console.log(pessoa3.sobrenome);
 console.log(pessoa3);
-pessoa3.falarNome();
+
