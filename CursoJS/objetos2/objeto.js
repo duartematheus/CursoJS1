@@ -37,16 +37,29 @@ console.log(pessoa3.nome);
 console.log(pessoa3.sobrenome);
 console.log(pessoa3);
 
-//Exemplo de factory 
+//Exemplo de factory function
 function criaPessoa(nome, sobrenome){
     return {
         nome,
         sobrenome,
-        get nomeCompleto(){
+        nomeCompleto(){
             return `${this.nome} ${this.sobrenome}`;
         }
     };
 }
 
 const p1 = criaPessoa('Matheus', 'Rocha Duarte');
-console.log(p1.nomeCompleto);
+console.log(p1.nomeCompleto());
+
+//Constructor function
+//começa com letra maiuscula.
+function Pessoa(nome2, sobrenome2){
+    this.nome2 = nome2;
+    this.sobrenome2 =sobrenome2
+
+    Object.freeze(this); // Congela os valores referenciados pelo "this".
+}
+
+const p2 = new Pessoa('Maria','Angélica');
+p2.nome2 = 'Luana'; // Neste momento estamos alterando o valor do nome2 
+console.log(p2);
