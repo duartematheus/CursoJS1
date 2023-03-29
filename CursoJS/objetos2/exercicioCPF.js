@@ -1,3 +1,24 @@
+/*
+  Cpf = 705.484.450-52
+  
+  7x 0x 5x 4x 8x 4x 4x 5x 0x 
+  10 9  8  7  6  5  4  3  2
+  __________________________
+  70 0 40  28 48 20 16 15 0  = 237
+
+  (237 % 11)- 11 = 5 (primeiro digito)
+  Se o primeiro digito for maior que 9 considerar 0.
+
+   7x 0x 5x 4x 8x 4x 4x 5x 0x (5x)
+   11 10 9  8  7  6  5  4  3   2
+   _____________________________
+   77 0  45 32 56 24 20 20  0  10 = 284
+   (284 % 11)- 11 = 2 (segundo digito)
+   Se o segundo digito for maior que 9, considerar 0.
+
+*/
+
+
 function ValidaCPF(cpfEnviado){
     Object.defineProperty(this,'cpfLimpo', {
         enumerable: true,
