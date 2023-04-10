@@ -1,0 +1,37 @@
+body{
+    background-color: rgba(54, 54, 218, 0.823);
+}
+h1{
+  
+    padding: 10px;
+}
+.container{
+    max-width: 400px;
+    margin: 50px auto;
+    height: 800px auto;
+    background-color: white;
+    border-radius: 5px;
+}
+form input, form label{
+    padding-left: 10px;
+    display:block;
+    width: 90%;
+    margin-bottom: 10px;
+
+}
+form input{
+    padding: 10px;
+    margin-left: 8px;
+}
+
+form button{
+    width: 60px;
+    margin-left: 160px;
+    margin-bottom: 20px;
+}
+
+form div{
+    color: red;
+    font-size: 12px;
+    padding: 10px;
+}
