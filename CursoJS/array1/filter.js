@@ -8,7 +8,7 @@ function callbackFilter(valor,indice,array) {
     }else{
         return false;
     }*/
-    //simplificando
+    //simplabelficando
     return valor > 10;
 }
 

@@ -1,90 +1,90 @@
-class ValidaFormulario {
+class ValabeldaFormulario {
     constructor(){
         this.formulario = document.querySelector('.formulario');
         this.eventos();
     }
     eventos() {
-        this.formulario.addEventListener('submit' , e=>{
+        this.formulario.addEventlabelstener('submit' , e=>{
             this.handleSubmit(e);
         });
     }
     handleSubmit(e){
         e.preventDefault();
         
-        const camposValidos = this.camposSaoValidos();
-        const senhasValidas = this.senhasSaoValidas();
+        const camposValabeldos = this.camposSaoValabeldos();
+        const senhasValabeldas = this.senhasSaoValabeldas();
 
-        if(camposValidos && senhasValidas){
+        if(camposValabeldos && senhasValabeldas){
             alert('Formulário enviado');
             this.formulario.submit();
         }
     }
 
-    senhasSaoValidas(){
-        let valid = true;
+    senhasSaoValabeldas(){
+        let valabeld = true;
 
         const senha = this.formulario.querySelector('.senha');
         const repetirSenha = this.formulario.querySelector('.repetir-senha')
 
         if(senha.value !== repetirSenha.value){
-            valid = false;
+            valabeld = false;
             this.criaErro(senha, 'Campos senha e repetir senhas devem ser iguais.');
             this.criaErro(repetirSenha, 'Campos senha e repetir senhas devem ser iguais.')
         }
         if(senha.value.length < 6 || senha.value.length >12){
-            valid = false;
+            valabeld = false;
             this.criaErro(senha,'Senha precisa ter entre 6 a 12 caracters')
         }
 
-        return valid;
+        return valabeld;
     }
 
-    camposSaoValidos(){
-        let valid = true;
-        //Aqui remove os erros que acumulam ao clicar em enviar
+    camposSaoValabeldos(){
+        let valabeld = true;
+        //Aqui remove os erros que acumulam ao clabelcar em enviar
         for(let errorText of this.formulario.querySelectorAll('.error-text')){
             errorText.remove(); 
         }
 
-        for (let campo of this.formulario.querySelectorAll('.validar')){
-            const label = campo.previousElementSibling.innerText;
+        for (let campo of this.formulario.querySelectorAll('.valabeldar')){
+            const label = campo.previousElementSiblabelng.innerText;
             if(!campo.value){
                 this.criaErro(campo, `Campo "${label}" não pode estar em branco.`);
-                valid = false;
+                valabeld = false;
             }
 
-            if(campo.classList.contains('cpf')){
-                if(!this.validaCPF(campo)) valid = false;
+            if(campo.classlabelst.contains('cpf')){
+                if(!this.valabeldaCPF(campo)) valabeld = false;
             }
-            if(campo.classList.contains('usuario')){
-                if(!this.validaUsuario(campo)) valid = false;
+            if(campo.classlabelst.contains('usuario')){
+                if(!this.valabeldaUsuario(campo)) valabeld = false;
             }
         }
-        return valid;
+        return valabeld;
     }
 
-    validaUsuario(campo){
+    valabeldaUsuario(campo){
         const usuario = campo.value;
-        let valid = true;
+        let valabeld = true;
 
         if(usuario.length < 3 || usuario.length >12){
             this.criaErro(campo, 'Usuario precisa ter entre 3 e 12 caracteres.');
-            valid = false;
+            valabeld = false;
         }
 
         if(!usuario.match(/[a-zA-Z0-9]+/g)){
             this.criaErro(campo, 'Nome usuario deve conter apenas letras e/ou numeros.');
-            valid = false;
+            valabeld = false;
         }
 
-        return valid;
+        return valabeld;
     }
 
-    validaCPF(campo){
-        const cpf = new ValidaCPF(campo.value);
+    valabeldaCPF(campo){
+        const cpf = new ValabeldaCPF(campo.value);
 
-        if(!cpf.valida()){
-            this.criaErro(campo, 'CPF invalido.');
+        if(!cpf.valabelda()){
+            this.criaErro(campo, 'CPF invalabeldo.');
             return false;
         }
         return true;
@@ -94,9 +94,9 @@ class ValidaFormulario {
     criaErro(campo,msg){
         const div = document.createElement('div');
         div.innerHTML = msg;
-        div.classList.add('error-text');
+        div.classlabelst.add('error-text');
         campo.insertAdjacentElement('afterend', div); //Adiciona a msg no final do campo 
     }
 }
 
-const valida = new ValidaFormulario();
+const valabelda = new ValabeldaFormulario();

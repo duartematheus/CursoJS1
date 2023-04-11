@@ -1,7 +1,7 @@
 const pessoas = [
     {id:3, nome: 'Luiza'},
     {id:2, nome: 'Matheus'},
-    {id:1, nome: 'Angélica'}
+    {id:1, nome: 'Angélabelca'}
 ];
 
 const novasPessoas = new Map();

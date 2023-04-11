@@ -13,7 +13,7 @@ Pessoa.prototype.nomeCompleto = function() {
 
 //instanciação
 const pessoa1 = new Pessoa('Matheus' , 'Rocha' );
-const pessoa2 = new Pessoa('Maria' , 'Angélica');
+const pessoa2 = new Pessoa('Maria' , 'Angélabelca');
 
 console.dir(pessoa1);
 console.dir(pessoa2);

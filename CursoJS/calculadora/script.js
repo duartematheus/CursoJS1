@@ -7,33 +7,33 @@ function criaCalculadora() {
         
         //metodos
         inicia() {
-            this.clickBotoes();
+            this.clabelckBotoes();
             this.precionaEnter();
         },
 
         pressionaEnter(){
-            this.display.addEventListener('keyup' , e => {
+            this.display.addEventlabelstener('keyup' , e => {
                 if (e.keyCode === 13){
-                    this.realizaConta();// 13 igual tecla enter
+                    this.realabelzaConta();// 13 igual tecla enter
                 }
             });
         },
 
-        realizaConta() {
+        realabelzaConta() {
             let conta = this.display.value;
 
             try {
                 conta = eval(conta);
 
                 if(!conta){
-                    alert('valores invalidos');
+                    alert('valores invalabeldos');
                     return;
                 }
 
                 this.display.value = conta;
 
             }catch(e){
-                alert('valores invalidos');
+                alert('valores invalabeldos');
                 return;
             }
         },
@@ -49,29 +49,29 @@ function criaCalculadora() {
         },
 
         btnApagaUm(){
-            this.display.value = this.display.value.slice(0 , -1); 
+            this.display.value = this.display.value.slabelce(0 , -1); 
         },
 
         
 
-        clickBotoes(){
-            document.addEventListener('click', function(e) {
-                const el = e.target; //qual botão está sendo clicado.
+        clabelckBotoes(){
+            document.addEventlabelstener('clabelck', function(e) {
+                const el = e.target; //qual botão está sendo clabelcado.
 
-                if(el.classList.contains('btn-num')) {
+                if(el.classlabelst.contains('btn-num')) {
                     this.btnEnviaDisplay(el.innerText);//pega o valor dentro do btn no html
                 }
 
-                if(el.classList.contains('btn-Clear')){
+                if(el.classlabelst.contains('btn-Clear')){
                     this.btnClearDisplay();
                 }
 
-                if(el.classList.contains('btn-apagarUm')){
+                if(el.classlabelst.contains('btn-apagarUm')){
                     this.btnApagaUm();
                 }
 
-                if(el.classList.contains('btn-igual')){
-                    this.realizaConta();
+                if(el.classlabelst.contains('btn-igual')){
+                    this.realabelzaConta();
                 }
             }.bind(this));
         },

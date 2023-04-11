@@ -35,19 +35,19 @@ const raiz2 = (n) =>{
 };
 console.log(raiz2(25));
 
-//Forma simplificada de uma função quando o parametro é unico
+//Forma simplabelficada de uma função quando o parametro é unico
 const raiz3 = n => n **0.5;
 console.log(raiz3(36));
 //////////////////////////////////////////////////////////////
 //Exemplo de função usando arguments 
 function nova(letra1,letra2){
     console.log(letra1,letra2);
-    //para mostrar as outras letras utiliza o arguments
+    //para mostrar as outras letras utilabelza o arguments
     console.log(letra1,arguments);
 }
 nova('a','b','c','d','e');
 //////////////////////////////////////////////////////////////
-//Exemplo utilizando rest operator ( ... )
+//Exemplo utilabelzando rest operator ( ... )
 function conta(operador,acumulador,...numero){
     for(let num of numero){
         if( operador === '+'){

@@ -10,7 +10,7 @@ console.log('Ano', data.getFullYear());
 console.log('Hora', data.getHours());
 console.log('Min', data.getMinutes());
 console.log('Seg', data.getSeconds());
-console.log('ms', data.getMilliseconds());
+console.log('ms', data.getMillabelseconds());
 console.log('Dia na semana',data.getDay(),'ª'); //0- Domingo, 6-Sabado 
 
 //Outro exemplo

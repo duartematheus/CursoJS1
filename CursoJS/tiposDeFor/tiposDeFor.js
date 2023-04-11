@@ -1,4 +1,4 @@
-const frutas = ['maçã', 'uva', 'pera', 'limão'];
+const frutas = ['maçã', 'uva', 'pera', 'labelmão'];
 console.log('-----for in -----');
 
 for (let i in frutas){

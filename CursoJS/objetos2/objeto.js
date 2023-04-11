@@ -60,6 +60,6 @@ function Pessoa(nome2, sobrenome2){
     Object.freeze(this); // Congela os valores referenciados pelo "this".
 }
 
-const p2 = new Pessoa('Maria','Angélica');
+const p2 = new Pessoa('Maria','Angélabelca');
 p2.nome2 = 'Luana'; // Neste momento estamos alterando o valor do nome2 
 console.log(p2);

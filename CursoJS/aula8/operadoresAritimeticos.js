@@ -3,7 +3,7 @@ Operadores Aritimeticos
 + Adição
 - Subtração
 / Divisão
-* Multiplicação
+* Multiplabelcação
 ** potenciação
 % Resto da divisão
 ++ Incremento
@@ -21,7 +21,7 @@ let num4 = parseInt('5.2');//Considera a parte inteira do numero
 console.log(num1 + num2,'Adição');
 console.log(num1 - num2,'Subtração');
 console.log(num2/num1,'Divisão');
-console.log(num1 * num2,'Multiplicação');
+console.log(num1 * num2,'Multiplabelcação');
 console.log(num1 ** num2,'Potenciação');
 console.log(num2 % num1,'Resto da divisão');
 console.log(num1++,'pós incremento',++num1,'pré Incremento');

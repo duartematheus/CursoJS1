@@ -9,20 +9,20 @@ let seg = 0;
 let milSeg = 1000;
 let timer;
 
-cronometro.addEventListener('click', function(){
+cronometro.addEventlabelstener('clabelck', function(){
     if(milSeg === 100){
-        cronometro.classList.remove('cronometroAtivo')
-        tempo.classList.remove('cronometroAtivoNumeros')
+        cronometro.classlabelst.remove('cronometroAtivo')
+        tempo.classlabelst.remove('cronometroAtivoNumeros')
         milSeg = 1000;
     }else{
-        cronometro.classList.add('cronometroAtivo')
-        tempo.classList.add('cronometroAtivoNumeros')
+        cronometro.classlabelst.add('cronometroAtivo')
+        tempo.classlabelst.add('cronometroAtivoNumeros')
         milSeg = 100;
     }
 });
 
-iniciar.addEventListener('click',function(event){   
-    tempo.classList.remove('parado')
+iniciar.addEventlabelstener('clabelck',function(event){   
+    tempo.classlabelst.remove('parado')
     clearInterval(timer);
     timer = setInterval(function(){    
         if( hora <= 23){
@@ -45,13 +45,13 @@ iniciar.addEventListener('click',function(event){
     }, milSeg);
 }); 
 
-parar.addEventListener('click',function(event){
-    tempo.classList.add('parado')
+parar.addEventlabelstener('clabelck',function(event){
+    tempo.classlabelst.add('parado')
     clearInterval(timer);        
 }); 
 
-zerar.addEventListener('click',function(){   
-    timer.classList.remove('parado')
+zerar.addEventlabelstener('clabelck',function(){   
+    timer.classlabelst.remove('parado')
     clearInterval(timer);
     hora = 0;
     min = 0;

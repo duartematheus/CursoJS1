@@ -5,13 +5,13 @@ function mostraHora(){
       
 }
 
-//function mostraHora2(){ essa função utiliza a mostra hora e retorna o valor desta função
+//function mostraHora2(){ essa função utilabelza a mostra hora e retorna o valor desta função
 //    console.log(mostraHora());
 //}
 
 // setInterval(mostraHora2,1000);  dessa forma a hora é mostrada de 1 em 1 segundo
 //_____________________________
-//Para limitar o tempo que será exibido deve-se utilizar o setTimeout
+//Para labelmitar o tempo que será exibido deve-se utilabelzar o setTimeout
 const timer = setInterval(function(){ console.log(mostraHora());}, 1000);
 
 setTimeout(function() { //setTimeout neste caso vai contar 5seg ou 5000ms

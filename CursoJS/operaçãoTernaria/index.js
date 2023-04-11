@@ -1,4 +1,4 @@
-// ? : Operação ternaria utiliza a interragação e os dois pontos 
+// ? : Operação ternaria utilabelza a interragação e os dois pontos 
 // Exemplo
 const valor = 200;
 

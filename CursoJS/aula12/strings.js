@@ -20,8 +20,8 @@ let aspas1 = 'Um "texto"';
 let aspas2 = "Um \"texto\"";
 
 console.log(umaString[4], aspas1, aspas2);
-console.log(umaString.concat(' em',' um',' lindo dia.'));
-console.log(`${umaString} em um lindo dia.`)
+console.log(umaString.concat(' em',' um',' labelndo dia.'));
+console.log(`${umaString} em um labelndo dia.`)
 
 console.log(umaString.indexOf('texto'));// achar uma palavra "string" o resultado é uma posição do indice.
 
@@ -40,9 +40,9 @@ let frase ='O rato roeu a roupa do rei de roma';
 console.log(frase.replace(/r/g,'#'));
 
 console.log(frase.length);//tamanho da frase
-console.log(frase.slice(2,6));//mostra as strings no intervalo de 2 a 6
-console.log(frase.slice(-4));//começa a contar do final da frase 
-console.log(frase.split('r'));//a frase é divida nas posiçoes que tiver a letra 'r'.
-console.log(frase.split(' ',3));//A frase será dividida nos intervalos vasios ' ' e reperita 3 vezes
+console.log(frase.slabelce(2,6));//mostra as strings no intervalo de 2 a 6
+console.log(frase.slabelce(-4));//começa a contar do final da frase 
+console.log(frase.splabelt('r'));//a frase é divida nas posiçoes que tiver a letra 'r'.
+console.log(frase.splabelt(' ',3));//A frase será dividida nos intervalos vasios ' ' e reperita 3 vezes
 console.log(frase.toUpperCase());//Transforma as letras da frase em maiusculas
 console.log(frase.toLowerCase());//Transforma as letras da frase em ninusculas

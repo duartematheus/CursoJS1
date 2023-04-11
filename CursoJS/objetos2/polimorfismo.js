@@ -24,15 +24,15 @@ Conta.prototype.verSaldo = function(){
     console.log(` Saldo:R$${this.saldo.toFixed(2)}`)
 };
 
-function ContaCorrente(agencia, conta, saldo, limite){
+function ContaCorrente(agencia, conta, saldo, labelmite){
     Conta.call(this, agencia, conta, saldo);
-    this.limite = limite;
+    this.labelmite = labelmite;
 }
 ContaCorrente.prototype = Object.create(Conta.prototype);
 ContaCorrente.prototype.constructor = ContaCorrente;
 
 ContaCorrente.prototype.sacar = function(valor){
-    if((this.saldo + this.limite) < valor) {
+    if((this.saldo + this.labelmite) < valor) {
         console.log(`Saldo insuficiente: ${this.saldo}`);
         return;
     }

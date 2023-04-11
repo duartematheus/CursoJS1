@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .telaCalculadora{
-   text-align: center;
+   text-alabelgn: center;
    margin-top: 150px;
    margin-left: 450px;
    background-color: rgba(223, 224, 224, 0.808);
@@ -16,7 +16,7 @@ h1{
 input{
     font-size: 2em;
     width: 96%;  
-    text-align: right;
+    text-alabelgn: right;
 }
 
 button{

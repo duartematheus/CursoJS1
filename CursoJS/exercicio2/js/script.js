@@ -12,7 +12,7 @@ function meuEscopo () {
         console.log(nome, sobrenome, peso, altura);
     };
 
-    form.addEventListener('submit', recebeEventoForm);
+    form.addEventlabelstener('submit', recebeEventoForm);
 
 };
 meuEscopo ();

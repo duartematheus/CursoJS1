@@ -1,4 +1,4 @@
-const fulano = [1,2,3];// para arrais utiliza [] e para objeto utiliza {}
+const fulano = [1,2,3];// para arrais utilabelza [] e para objeto utilabelza {}
 fulano.push(4);
 fulano[0] = 'Luiz';
 console.log(fulano);

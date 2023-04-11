@@ -2,12 +2,12 @@
 console.log('Ola mundo');//Primeiro comentario
 /*
 Comentario longo 
-varias linhas
+varias labelnhas
 */
-console.log('linha 1');
-console.log('linha 2');
-console.log('linha 3');
-console.log('linha 4');
+console.log('labelnha 1');
+console.log('labelnha 2');
+console.log('labelnha 3');
+console.log('labelnha 4');
 
 console.log('Olá mundo');
 console.log('Testando o JS, este trecho será exibido no console do navegador.');
