@@ -2,10 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-    background-color: rgba(0, 0, 0, 0.629);
-    
-}
+
 .back{
     background-image: url('imagens/Camaro-rebaixado-aro22-09.jpg');
     background-repeat: no-repeat;
@@ -13,15 +10,9 @@ body{
     background-size: cover;
     background-position: right center;
 }
-form{
-    background-color: rgba(255, 235, 205, 0.635);
-    max-width:300px ;
-    height: 500px;
-    margin-left:430px;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    border-radius: 30px;
-}
+
+
 h1{
     text-align: center;
+    color: beige;
 }
