@@ -10,9 +10,28 @@
     background-size: cover;
     background-position: right center;
 }
-
+.container{
+    background-color: rgba(70, 156, 230, 0.746);
+    width: 250px;
+    height: 400px;   
+    margin-left: 450px ;
+    margin-top: 30px;
+    border-radius: 20px;
+}
 
 h1{
     text-align: center;
     color: beige;
+    padding: 20px;
+}
+
+form{
+    padding: 40px;
+    margin-top: 5px;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 55px;
+    width: 60px;
 }

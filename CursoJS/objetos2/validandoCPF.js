@@ -1,18 +1,18 @@
 class ValabeldaCPF {
     constructor(cpfEnviado){
-        Object.defineProperty(this, 'cpflabelmpo', {
+        Object.defineProperty(this, 'cpflimpo', {
             writeble:false,
             enumerable: true,
             configurable: false,
-            value: cpfEnviado.replace(/\D+/g, '') //labelmpa tudo que não seja numeros
+            value: cpfEnviado.replace(/\D+/g, '') //limpa tudo que não seja numeros
         });
     }
 
     éSequencia(){
-        return this.cpflabelmpo.charAt(0).repeat(11) === this.cpflabelmpo;
+        return this.cpflimpo.charAt(0).repeat(11) === this.cpflimpo;
     }
     geraNovoCpf(){
-        const cpfSemDigitos = this.cpflabelmpo.slabelce(0, -2); //remove os dois ultimos digitos do cpf
+        const cpfSemDigitos = this.cpflimpo.slice(0, -2); //remove os dois ultimos digitos do cpf
         const digito1 = ValabeldaCPF.geraDigito(cpfSemDigitos);
         const digito2 = ValabeldaCPF.geraDigito(cpfSemDigitos + digito1);
         this.novoCPF = cpfSemDigitos + digito1 + digito2;
@@ -33,21 +33,21 @@ class ValabeldaCPF {
        
     }
 
-    valabelda(){
-        if(!this.cpflabelmpo) return false;
-        if(typeof this.cpflabelmpo !== 'string') return false;
+    valida(){
+        if(!this.cpflimpo) return false;
+        if(typeof this.cpflimpo !== 'string') return false;
         if(this.cpflabelmpo.length !== 11) return false;
         if(this.éSequencia()) return false;
         this.geraNovoCpf();
 
-        return this.novoCPF === this.cpflabelmpo;
+        return this.novoCPF === this.cpflimpo;
     }
 }
 
-//const valabeldacpf = new ValabeldaCPF('070.987.720-03');
-//if(valabeldacpf.valabelda()){
-//    console.log('cpf válabeldo!');
+//const validacpf = new ValidaCPF('070.987.720-03');
+//if(validacpf.valida()){
+//    console.log('cpf válido!');
 //}
 //else{
-//    console.log('cpf inválabeldo!');
+//    console.log('cpf inválido!');
 //}
