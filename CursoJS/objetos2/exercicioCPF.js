@@ -19,8 +19,8 @@
 */
 
 
-function ValabeldaCPF(cpfEnviado){
-    Object.defineProperty(this,'cpflabelmpo', {
+function ValidaCPF(cpfEnviado){
+    Object.defineProperty(this,'cpflimpo', {
         enumerable: true,
         get: function(){
             return cpfEnviado.replace(/\D+/g, ''); //tudo que for diferente de numero será substituido po nada.
@@ -29,22 +29,22 @@ function ValabeldaCPF(cpfEnviado){
     });
 }
 
-ValabeldaCPF.prototype.valabelda = function() {
-    if(typeof this.cpflabelmpo === 'undefined') return false;
-    if(this.cpflabelmpo.length !== 11) return false;
+ValidaCPF.prototype.valida = function() {
+    if(typeof this.cpflimpo === 'undefined') return false;
+    if(this.cpflimpo.length !== 11) return false;
     if(this.isSequencia()) return false;
 
 
-    const cpfParcial = this.cpflabelmpo.slabelce(0 ,-2); //pega os 9 primeiros digitos do cpf
+    const cpfParcial = this.cpflimpo.slice(0 ,-2); //pega os 9 primeiros digitos do cpf
     const digito1 = this.criaDigito(cpfParcial);
     const digito2 = this.criaDigito(cpfParcial + digito1);
     
     const novoCpf = cpfParcial + digito1 + digito2;
-    return novoCpf === this.cpflabelmpo;
+    return novoCpf === this.cpflimpo;
    
 };
 
-ValabeldaCPF.prototype.criaDigito  = function(cpfParcial) {
+ValidaCPF.prototype.criaDigito  = function(cpfParcial) {
     const cpfArray = Array.from(cpfParcial);
     let regressivo = cpfArray.length + 1;
     const total = cpfArray.reduce((ac,val) => {
@@ -59,17 +59,17 @@ ValabeldaCPF.prototype.criaDigito  = function(cpfParcial) {
 
 };
 
-ValabeldaCPF.prototype.isSequencia = function() {
-    const sequencia = this.cpflabelmpo[0].repeat(this.cpflabelmpo.length);
-    return sequencia === this.cpflabelmpo;
+ValidaCPF.prototype.isSequencia = function() {
+    const sequencia = this.cpflimpo[0].repeat(this.cpflimpo.length);
+    return sequencia === this.cpflimpo;
 
 };
 
 
-const cpf = new ValabeldaCPF('070.987.720-03');
+const cpf = new ValidaCPF('070.987.720-03');
 
-if(cpf.valabelda()){
-    console.log('Cpf válabeldo')
+if(cpf.valida()){
+    console.log('Cpf válido')
 }else{
-    console.log('Cpf inválabeldo');
+    console.log('Cpf inválido');
 };

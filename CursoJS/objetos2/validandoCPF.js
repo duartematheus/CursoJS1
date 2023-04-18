@@ -1,4 +1,4 @@
-class ValabeldaCPF {
+class ValidaCPF {
     constructor(cpfEnviado){
         Object.defineProperty(this, 'cpflimpo', {
             writeble:false,
@@ -13,8 +13,8 @@ class ValabeldaCPF {
     }
     geraNovoCpf(){
         const cpfSemDigitos = this.cpflimpo.slice(0, -2); //remove os dois ultimos digitos do cpf
-        const digito1 = ValabeldaCPF.geraDigito(cpfSemDigitos);
-        const digito2 = ValabeldaCPF.geraDigito(cpfSemDigitos + digito1);
+        const digito1 = ValidaCPF.geraDigito(cpfSemDigitos);
+        const digito2 = ValidaCPF.geraDigito(cpfSemDigitos + digito1);
         this.novoCPF = cpfSemDigitos + digito1 + digito2;
     }
 
@@ -36,7 +36,7 @@ class ValabeldaCPF {
     valida(){
         if(!this.cpflimpo) return false;
         if(typeof this.cpflimpo !== 'string') return false;
-        if(this.cpflabelmpo.length !== 11) return false;
+        if(this.cpflimpo.length !== 11) return false;
         if(this.éSequencia()) return false;
         this.geraNovoCpf();
 
