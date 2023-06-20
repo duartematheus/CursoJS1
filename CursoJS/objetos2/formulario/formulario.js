@@ -22,11 +22,20 @@ class ValidaFormulario {
     camposSaoValidos(){
         let valid = true;
 
+        for(let errorText of this.formulario.querySelectorAll('.error-text')){
+            errorText.remove();
+        }
+        
         for(let campo of this.formulario.querySelectorAll('.validar')){
+            const label = campo.previousElementSibling.innerText;
             //console.log(campo);
             if(!campo.value){
-                this.criaErro(campo, 'Campo tal não pode estar em branco.');
+                this.criaErro(campo, `Campo "${label}" não pode estar em branco.`);
                 valid = false;
+            }
+
+            if(campo.classList.contains('cpf')){
+                if(!this.validaCPF()) valid = false;
             }
         }
     }
