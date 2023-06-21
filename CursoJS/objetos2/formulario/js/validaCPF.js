@@ -17,7 +17,7 @@
    Se o segundo digito for maior que 9, considerar 0.
 
 */
-class CPF{
+class ValidaCPF {
     constructor(cpfRecebido){
         //Limpa o valor recebido como cpf removendo o que não é numero
         Object.defineProperty(this, 'cpflimpo', {
@@ -65,7 +65,7 @@ class CPF{
 
 }
 
-const testeCPF = new CPF('017.146.596-92');
+//const testeCPF = new CPF('017.146.596-92');
 
 /*
 if(testeCPF.validandoCPF()){

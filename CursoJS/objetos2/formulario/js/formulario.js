@@ -40,6 +40,18 @@ class ValidaFormulario {
         }
     }
 
+    validaCPF(campo){
+        const cpf = new ValidaCPF(campo.value);
+
+        if(!cpf.validandoCPF()) {
+            this.criaErro(campo, 'CPF inválido.');
+            return false;
+        }
+
+        return true;
+    }
+
+
     criaErro(campo, msg){
         const div = document.createElement('div');
         div.innerHTML = msg;
