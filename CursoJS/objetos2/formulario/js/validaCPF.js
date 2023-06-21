@@ -17,7 +17,8 @@
    Se o segundo digito for maior que 9, considerar 0.
 
 */
-class ValidaCPF {
+
+class VerificaCPF {
     constructor(cpfRecebido){
         //Limpa o valor recebido como cpf removendo o que não é numero
         Object.defineProperty(this, 'cpflimpo', {
@@ -28,7 +29,7 @@ class ValidaCPF {
         } );
     }
 
-    validandoCPF(){
+    valida(){
         if(!this.cpflimpo) return false;
         if(this.cpflimpo.length !== 11) return false;
         if(typeof this.cpflimpo !== 'string') return false;
@@ -37,6 +38,7 @@ class ValidaCPF {
 
         return this.novoCPF === this.cpflimpo;
     }
+    
 
     verificaSequencia(){
         return this.cpflimpo.charAt(0).repeat(11) === this.cpflimpo;

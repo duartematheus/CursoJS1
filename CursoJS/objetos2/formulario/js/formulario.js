@@ -38,12 +38,13 @@ class ValidaFormulario {
                 if(!this.validaCPF()) valid = false;
             }
         }
+        
     }
 
     validaCPF(campo){
-        const cpf = new ValidaCPF(campo.value);
+        const cpf = new VerificaCPF(campo.value);
 
-        if(!cpf.validandoCPF()) {
+        if(!cpf.valida()) {
             this.criaErro(campo, 'CPF inválido.');
             return false;
         }
