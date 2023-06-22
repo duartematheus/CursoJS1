@@ -60,17 +60,17 @@ class VerificaCPF {
 
     geraNovoCpf(){
         const cpfSemDigitos = this.cpflimpo.slice(0, -2);
-        const digito1 = CPF.geraDigito(cpfSemDigitos);
-        const digito2 = CPF.geraDigito(cpfSemDigitos + digito1);
+        const digito1 = VerificaCPF .geraDigito(cpfSemDigitos);
+        const digito2 = VerificaCPF .geraDigito(cpfSemDigitos + digito1);
         this.novoCPF = cpfSemDigitos + digito1 + digito2;
     }
 
 }
 
-//const testeCPF = new CPF('017.146.596-92');
+/*let testeCPF = new VerificaCPF('017.146.536-92');
 
-/*
-if(testeCPF.validandoCPF()){
+
+if(testeCPF.valida()){
     console.log('CPF ok')
 }else{
     console.log('CPF errado')

@@ -15,9 +15,10 @@ class ValidaFormulario {
         e.preventDefault();
         //console.log('Formulário não enviado...');
         const camposValidos = this.camposSaoValidos();
+        const senhasValidas = this.senhasSãoValidas();
         
-
     }
+    
 
     camposSaoValidos(){
         let valid = true;
@@ -35,10 +36,30 @@ class ValidaFormulario {
             }
 
             if(campo.classList.contains('cpf')){
-                if(!this.validaCPF()) valid = false;
+                if(!this.validaCPF(campo)) valid = false;
+            }
+            if(campo.classList.contains('usuario')){
+                if(!this.validaUsuario(campo)) valid = false;
             }
         }
+        return valid;
         
+    }
+    validaUsuario(campo){
+        const usuario = campo.value;
+        let valid = true;
+
+        if(usuario.length < 3 || usuario.length > 12){
+            this.criaErro(campo,'Usuario deve conter 3 a 12 digitos.');
+            valid = false;
+        }
+
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)){
+            this.criaErro(campo,'Usuario deve conter letras maiusculas e minusculas e numeros.')
+            valid = false;
+        }
+
+        return true;
     }
 
     validaCPF(campo){
